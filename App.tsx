@@ -3,7 +3,7 @@ import { useVideoPlayer, VideoView } from "expo-video";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Ionicons from "@expo/vector-icons/Ionicons";
-
+import { useFonts } from "@expo-google-fonts/inter";
 const Tab = createBottomTabNavigator();
 
 function Sobre() {
