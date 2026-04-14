@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View, ScrollView, Image } from "react-native";
 import { useVideoPlayer, VideoView } from "expo-video";
+import TextoPadrao from "../componements/TextoPadrao";
 
 export default function Sobre() {
   const player = useVideoPlayer(
@@ -23,22 +24,22 @@ export default function Sobre() {
       </View>
       <View style={styles.divTexto}>
         <Text style={styles.titulo}>SmartRural</Text>
-        <Text style={styles.paragrafo}>
+        <TextoPadrao style={styles.paragrafo}>
           A SmartRural é uma empresa focada em soluções digitais para o campo.
           Atua no desenvolvimento de tecnologia voltada à gestão rural,
           conectividade e otimização de processos agrícolas.
-        </Text>
-        <Text style={styles.paragrafo}>
+        </TextoPadrao>
+        <TextoPadrao style={styles.paragrafo}>
           Seu objetivo é simplificar o controle da propriedade, centralizando
           dados, métricas e operações em uma única plataforma intuitiva. A
           proposta é unir tradição e inovação, permitindo que produtores tomem
           decisões mais rápidas, precisas e estratégicas.
-        </Text>
-        <Text style={styles.paragrafo}>
+        </TextoPadrao>
+        <TextoPadrao style={styles.paragrafo}>
           Com uma abordagem prática e funcional, a SmartRural busca aumentar
           produtividade, reduzir desperdícios e trazer mais controle sobre as
           atividades do dia a dia no campo.
-        </Text>
+        </TextoPadrao>
       </View>
       <View style={styles.caixaVideo}>
         <VideoView
