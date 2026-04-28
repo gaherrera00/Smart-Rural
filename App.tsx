@@ -3,6 +3,12 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import Sobre from "./telas/Sobre";
 import Contato from "./telas/Contato";
+import Produtos from "./telas/Produtos";
+import listaProdutos from "./telas/mocks/listaProdutos";
+
+function MenuProdutos() {
+  return <Produtos {...listaProdutos} />
+}
 
 const Tab = createBottomTabNavigator();
 
@@ -36,7 +42,8 @@ function Menu() {
       })}
     >
       <Tab.Screen name="Sobre" component={Sobre} />
-      <Tab.Screen name="Contato" component={Contato} />
+      <Tab.Screen name="Contato" component={MenuProdutos} />
+      <Tab.Screen name="Produtos" component={Produtos} />
     </Tab.Navigator>
   );
 }

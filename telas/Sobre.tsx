@@ -2,6 +2,8 @@ import { StyleSheet, Text, View, ScrollView, Image } from "react-native";
 import { useVideoPlayer, VideoView } from "expo-video";
 import TextoPadrao from "../componements/TextoPadrao";
 
+
+
 export default function Sobre() {
   const player = useVideoPlayer(
     "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
