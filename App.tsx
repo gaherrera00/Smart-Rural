@@ -4,6 +4,7 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 import Sobre from "./telas/Sobre";
 import Contato from "./telas/Contato";
 import Produtos from "./telas/Produtos/index";
+import Perfil from "./telas/Perfil/index";
 import listaProdutos from "./telas/mocks/listaProdutos";
 
 function MenuProdutos() {
@@ -17,12 +18,16 @@ function Menu() {
     <Tab.Navigator
       screenOptions={({ route }) => ({
         tabBarIcon: ({ focused, color }) => {
-          let iconName: keyof typeof Ionicons.glyphMap = "paw-outline";
+          let iconName: keyof typeof Ionicons.glyphMap = "leaf-outline";
 
           if (route.name === "Sobre") {
             iconName = focused ? "leaf" : "leaf-outline";
           } else if (route.name === "Contato") {
             iconName = focused ? "call" : "call-outline";
+          } else if (route.name === "Produtos") {
+            iconName = focused ? "grid" : "grid-outline";
+          } else if (route.name === "Perfil") {
+            iconName = focused ? "person" : "person-outline";
           }
 
           return <Ionicons name={iconName} size={24} color={color} />;
@@ -44,6 +49,7 @@ function Menu() {
       <Tab.Screen name="Sobre" component={Sobre} />
       <Tab.Screen name="Contato" component={Contato} />
       <Tab.Screen name="Produtos" component={MenuProdutos} />
+      <Tab.Screen name="Perfil" component={Perfil} />
     </Tab.Navigator>
   );
 }
